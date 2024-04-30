@@ -2,6 +2,7 @@ import pickle
 class Seznam_cisel:
     def __init__(self):
         self.seznam = []
+        self.seznam = [int(item) for item in input("Zadejte čísla oddělená mezerou: ").split()]
 
     def pridat_cislo(self, cislo):
         if cislo not in self.seznam:
