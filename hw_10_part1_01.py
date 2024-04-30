@@ -80,3 +80,6 @@ def main():
 
         else:
             print('Neplatná volba. Zadejte číslo od 1 do 5 nebo napište end.')
+
+if __name__ == '__main__':
+    main()
