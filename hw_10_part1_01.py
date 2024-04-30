@@ -13,7 +13,8 @@ class Seznam_cisel:
 
     def odstranit_cislo(self, cislo):
         if cislo in self.seznam:
-            self.seznam.remove(cislo)
+            while cislo in self.seznam:
+                self.seznam.remove(cislo)
             print(f'Číslo {cislo} bylo odstraněno ze seznamu.')
         else:
             print(f'Číslo {cislo} není v seznamu.')
@@ -45,7 +46,7 @@ def main():
     while True:
         print('\nNabídka:')
         print('1. Přidat nové číslo do seznamu.')
-        print('2. Odstranit číslo ze seznamu.')
+        print('2. Odstranit veškerý výskyt čísla v seznamu.')
         print('3. Zobrazit obsah seznamu.')
         print('4. Uložit seznam do souboru.')
         print('5. Načíst seznam ze souboru.')
