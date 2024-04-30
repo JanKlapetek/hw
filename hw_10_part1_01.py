@@ -78,6 +78,7 @@ def main():
             muj_seznam.nacist_ze_souboru(soubor)
 
         elif volba.lower() == 'end':
+            print('Konec programu.')
             break
 
         else:
