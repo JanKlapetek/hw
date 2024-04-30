@@ -39,3 +39,44 @@ class Seznam_cisel:
         except FileNotFoundError:
             print(f'Soubor {soubor} neexistuje.')
 
+def main():
+    muj_seznam = Seznam_cisel()
+    while True:
+        print('\nNabídka:')
+        print('1. Přidat nové číslo do seznamu.')
+        print('2. Odstranit číslo ze seznamu.')
+        print('3. Zobrazit obsah seznamu.')
+        print('4. Uložit seznam do souboru.')
+        print('5. Načíst seznam ze souboru.')
+        volba = input('Zadejte číslo akce (1-5) nebo (end) pro ukončení programu: ')
+
+        if volba == '1':
+            cislo = int(input('Zadejte číslo, které chcete přidat do seznamu: '))
+            muj_seznam.pridat_cislo(cislo)
+
+        elif volba == '2':
+            cislo = int(input('Zadejte číslo, které chcete odstranit ze seznamu: '))
+            muj_seznam.odstranit_cislo(cislo)
+
+        elif volba == '3':
+            volba2 = input('Napiš (vzestupne) nebo (sestupne): ')
+            if volba2 == 'sestupne':
+                muj_seznam.zobrazit_obsah(sestupne=True)
+            elif volba2 == 'vzestupne':
+                muj_seznam.zobrazit_obsah()
+            else:
+                print('Neplatná volba. Zadejte (vzestupne) nebo (sestupne).')
+
+        elif volba == '4':
+            soubor = input('Zadejte název souboru pro uložení seznamu: ')
+            muj_seznam.ulozit_do_souboru(soubor)
+
+        elif volba == '5':
+            soubor = input('Zadejte název souboru pro načtení seznamu: ')
+            muj_seznam.nacist_ze_souboru(soubor)
+
+        elif volba.lower() == 'end':
+            break
+
+        else:
+            print('Neplatná volba. Zadejte číslo od 1 do 5 nebo napište end.')
