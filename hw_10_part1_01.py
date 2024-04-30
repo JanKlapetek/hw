@@ -25,3 +25,17 @@ class Seznam_cisel:
                 print(cislo)
         else:
             print('Seznam je prázdný.')
+
+    def ulozit_do_souboru(self, soubor):
+        with open(soubor, 'wb') as f:
+            pickle.dump(self.seznam, f)
+            print(f'Seznam byl uložen do souboru {soubor}.')
+
+    def nacist_ze_souboru(self, soubor):
+        try:
+            with open(soubor, 'rb') as f:
+                self.seznam = pickle.load(f)
+                print(f'Seznam byl načten ze souboru {soubor}.')
+        except FileNotFoundError:
+            print(f'Soubor {soubor} neexistuje.')
+
