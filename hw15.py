@@ -1,4 +1,5 @@
-import unittest
+import pytest
+
 class MnozinaCisel:
     def __init__(self):
         self.prvky = set()
@@ -31,10 +32,11 @@ class MnozinaCisel:
 
 # Příklad použití:
 moje_mnozina = MnozinaCisel()
-moje_mnozina.pridat(int(input('Zadej 1. číslo: ')))
-moje_mnozina.pridat(int(input('Zadej 2. číslo: ')))
-moje_mnozina.pridat(int(input('Zadej 3. číslo: ')))
-moje_mnozina.pridat(int(input('Zadej 4. číslo: ')))
+moje_mnozina.pridat(20)
+moje_mnozina.pridat(40)
+moje_mnozina.pridat(60)
+moje_mnozina.pridat(80)
+moje_mnozina.pridat(100)
 
 print(f"Součet: {moje_mnozina.soucet()}")
 print(f"Průměr: {moje_mnozina.prumer()}")
