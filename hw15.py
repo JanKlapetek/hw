@@ -1,4 +1,3 @@
-import pytest
 
 class MnozinaCisel:
     def __init__(self):
@@ -35,8 +34,7 @@ moje_mnozina = MnozinaCisel()
 moje_mnozina.pridat(20)
 moje_mnozina.pridat(40)
 moje_mnozina.pridat(60)
-moje_mnozina.pridat(80)
-moje_mnozina.pridat(100)
+
 
 print(f"Součet: {moje_mnozina.soucet()}")
 print(f"Průměr: {moje_mnozina.prumer()}")
