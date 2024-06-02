@@ -1,3 +1,9 @@
+'''
+Task1
+# Aplikace po spuštění spustí tři vlákna. První vlákno vyplní seznam náhodnými čísly. Další dvě vlákna čekají.
+# Jakmile je seznam naplněn, spustí se obě vlákna. První vlákno zjistí součet prvků seznamu, druhé vlákno zjistí průměr v tomto seznamu.
+# Obdržený seznam, součet a průměr se zobrazí na obrazovce.
+'''
 import random
 import threading
 
