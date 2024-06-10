@@ -16,7 +16,7 @@ body {
 
 /* Header styling */
 header {
-    background: #333;
+    background: black;
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -64,7 +64,7 @@ section p {
 }
 
 /* Service boxes styling */
-.service {
+.html_home {
     background: #fff;
     padding: 15px;
     border: 1px solid #ddd;
@@ -86,3 +86,50 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+a {
+    text-decoration: underline;
+    color: #6A87A7;
+}
+
+a:link {
+    text-decoration: underline;
+    color: #6A87A7;
+}
+
+a:visited {
+    text-decoration: underline;
+    color: #92A7BE;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+
+a.tlacitko {
+    border-bottom: 1px solid #D1D1D1;
+    background-color: transparent;
+    font-size: 10pt;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #666666;
+    display: block;
+}
+
+a.tlacitko:link {
+    text-decoration: none;
+    color: #666666;
+}
+
+a.tlacitko:visited {
+    text-decoration: none;
+    color: #666666;
+}
+
+a.tlacitko:hover {
+    text-decoration: none;
+    border-bottom: 1px solid orange;
+    color: orange;
+}
+
